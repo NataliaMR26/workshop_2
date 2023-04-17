@@ -8,6 +8,95 @@
     <link type="text/css" href="./styles/styles.css" rel="stylesheet" />
 </head>
 <body>
+    <header>
+        <nav class="navbar container">
+            <figure>
+                <img src="./images/logo.svg" alt="Snap" />
+            </figure>
+        <div class="navbar__menu">
+            <ul class="navbar__list">
+                <li class="navbar__list-drop">
+                <a href="#"> Features <img src="./images/icon-arrow-down.svg" alt="arrow-down"> </a>
+                <ul class="navbar__list-drop-menu features">
+                    <li><a href="#"><img src="./images/icon-todo.svg" alt="icon-todo">To-do List 
+                    </a></li>
+                    <li><a href="#"><img src="./images/icon-calendar.svg" alt="icon-calendar">Calendar
+                    </a></li>
+                    <li><a href="#"><img src="./images/icon-reminders.svg" alt="icon-reminders">Reminders
+                    </a></li>
+                    <li><a href="#"><img src="./images/icon-planning.svg" alt="icon-planning">Planning
+                    </a></li>
+                </ul>
+                </li>
+
+                <li class="navbar__list-drop">
+                <a href="#">Company <img src="./images/icon-arrow-down.svg" alt="arrow-down"> </a>
+                <ul class="navbar__list-drop-menu company">
+                    <li><a href="#">History</a></li>
+                    <li><a href="#">Our Team</a></li>
+                    <li><a href="#">Blog</a></li>
+                </ul>
+                </li>
+
+                <li><a href="#">Careers</a></li>
+                <li><a href="#">About</a></li>
+            </ul>
+
+            <div class="navbar__buttons">
+                <a class="navbar__buttons-login" href="#">Login</a>
+                <button class="navbar__buttons-register" href="#">Register</button>
+            </div>
+        </div>
+
+        <div class='demo'>
+            <div id="menu-icon" class='menu'>
+            <span class='bar1'></span>
+            <span class='bar2'></span>
+            <span class='bar3'></span>
+            </div>
+        </div>
+        </nav>
+    </header>
+
+    <main>
+        <div class="section-hero container">
+            <div class="section-hero__left">
+                <div class="section-hero__left-content">
+                <h1 class="section-hero__left-content-header">Make <br> remote work</h1>
+                <p class="section-hero__left-content-description">
+                    Get your team in sync, no matter your location. Streamline
+                    processes, create team rituals, and watch productivity soar.
+                </p>
+                    <div>
+                    <button class="section-hero__left-content-button" href="#">
+                    Learn more
+                    </button>
+                    </div>
+                </div>
+
+                <div class="section-hero__left-clients">
+                    <div>
+                        <img src="./images/client-databiz.svg" alt="client-databiz">
+                    </div>
+                    <div>
+                        <img src="./images/client-audiophile.svg" alt="client-audiophile">
+                    </div>
+                    <div>
+                        <img src="./images/client-meet.svg" alt="client-meet">
+                    </div>
+                    <div>
+                        <img src="./images/client-maker.svg" alt="client-maker">
+                    </div>
+                </div>
+            </div>
+
+            <div class="section-hero__right">
+                <img class="section-hero__right-desktop" src="./images/image-hero-desktop.png" alt="Snap Hero" />
+                <img class="section-hero__right-mobile" src="./images/image-hero-mobile.png" alt="Snap Hero" />
+            </div>
+        </div>
+    </main>
+
 <script src="script.js"></script>
 </body>
 </html>

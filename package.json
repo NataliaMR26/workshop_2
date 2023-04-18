@@ -1,5 +1,4 @@
 {
-  "homepage": "https://NataliaMR26.github.io/workshop_2",
   "name": "workshop_2",
   "version": "1.0.0",
   "description": "",
@@ -32,5 +31,6 @@
   },
   "devDependencies": {
     "gh-pages": "^5.0.0"
-  }
+  },
+  "homepage": "https://NataliaMR26.github.io/workshop_2"
 }

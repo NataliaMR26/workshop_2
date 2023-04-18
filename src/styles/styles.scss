@@ -16,38 +16,31 @@
     -webkit-font-smoothing: antialiased;
     text-size-adjust: none;
 }
-
 :root {
     --theme-light-color: hsl(0, 0%, 98%);
     --theme-dark-color: hsl(0, 0%, 8%);
     --text-gray-color: hsl(0, 0%, 41%);
     --body-font: "Epilogue", sans-serif;
 }
-
 body {
     background-color: var(--theme-light-color);
     font-family: var(--body-font);
     line-height: 1;
 }
-
-img {
+.banner {
     width: 100%;
 }
-
 a {
     color: inherit;
     text-decoration: none;
 }
-
 button {
     cursor: pointer;
 }
-
 ol,
 ul {
     list-style: none;
 }
-
 .container {
     max-width: 1440px;
     margin: 0 auto;
@@ -57,7 +50,6 @@ ul {
         max-width: 1200px;
     }
 }
-
 header {
     position: fixed;
     width: 100%;
@@ -66,7 +58,6 @@ header {
     z-index: 1000;
     background-color: var(--theme-light-color);
 }
-
 .navbar {
     display: flex;
     justify-content: space-between;

@@ -3,6 +3,7 @@ const HTMLWebpackPlugin = require('html-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 
 module.exports = {
+  mode:"none",
   entry: {
     //sirve para indicar el archivo de Javascript de entrada de este proyecto.
     app: ["@babel/polyfill", "./src/app/index.js"]
@@ -13,7 +14,6 @@ module.exports = {
     //filename: Sirve para decirle el nombre del archivo del bundle que va a generar.
     filename: "js/app.bundle.js",
   },
-  mode:'development',
   devServer: {
     port: 5050
 },
@@ -25,10 +25,20 @@ module: {
             loader: 'babel-loader'
         },
         {
-            test: /\.css$/i,
-            use: [MiniCssExtractPlugin.loader, 'css-loader'],
-        }
-    ]
+            test: /\.scss$/i,
+            use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"],
+        },
+        {
+            test:/\.(png|svg|jpg|jpeg)$/i,
+            type: 'asset/resource'
+        },
+        {
+            test: /\.html$/,
+            use:[
+                'html-loader'
+            ]
+        },
+    ],
 },
 plugins: [
     //sirve para definir los plugins que vamos a usar, que permiten ampliar la cantidad y el tipo 
@@ -38,20 +48,19 @@ plugins: [
     //transformaciones o tareas deseadas.
     new HTMLWebpackPlugin({
         hash: true,
+        filename: 'index.html',
         template: './src/index.html',
         minify: {
-            collapseWhitespace:
-                true,
+            collapseWhitespace:true,
             removeComments: true,
             removeRedundantAttributes: true,
             removeScriptTypeAttributes: true,
             removeStyleLinkTypeAttributes: true,
             useShortDoctype: true
-        }
-
+        },
     }),
     new MiniCssExtractPlugin({
-        filename: 'css/app.bundle.css'
+        filename: "css/app.bundle.css",
     }),
 ]
 }

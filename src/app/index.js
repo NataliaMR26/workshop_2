@@ -1,3 +1,5 @@
+import './styles/style.scss';
+
 const Buttons = document.querySelectorAll(".navbar__list-drop");
 const menu = document.querySelector("#menu-icon");
 const navbar = document.querySelector(".navbar__menu");
